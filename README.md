@@ -1,10 +1,21 @@
 # Overview
+
 - prometheus javaagent version: 0.12.0
-- skywalking agent version: 7.0.0
+- skywalking agent version: 8.0.0
 
 # Usage
 
-- k8s yaml
+> scripts
+
+```bash
+./build.sh
+./push.sh
+
+docker tag stonewlg/monitor-agent:latest harbor06.chint.com/chint-public/monitor-agent:latest
+docker push harbor06.chint.com/chint-public/monitor-agent:latest
+```
+
+> k8s yaml
 
 ```yaml
   initContainers:
